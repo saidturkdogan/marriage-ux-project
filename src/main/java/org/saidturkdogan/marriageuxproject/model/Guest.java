@@ -14,15 +14,9 @@ import java.util.UUID;
 @NoArgsConstructor
 @Builder
 
-
-public class Gift {
-
+public class Guest {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    private String name;
-
-    @Enumerated(EnumType.STRING)
-    private GiftType giftType;
 }

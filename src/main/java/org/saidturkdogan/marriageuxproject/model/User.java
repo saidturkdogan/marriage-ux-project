@@ -15,14 +15,16 @@ import java.util.UUID;
 @Builder
 
 
-public class Gift {
-
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     private String name;
+    private String surname;
+    private String email;
 
-    @Enumerated(EnumType.STRING)
-    private GiftType giftType;
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    private List<Wedding> weddings;
+
 }

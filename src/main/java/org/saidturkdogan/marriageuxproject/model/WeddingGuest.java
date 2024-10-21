@@ -3,6 +3,7 @@ package org.saidturkdogan.marriageuxproject.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Entity
@@ -23,4 +24,6 @@ public class WeddingGuest {
 
     @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private Guest guest;
+
+    private BigDecimal amount;
 }
