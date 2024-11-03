@@ -19,4 +19,7 @@ public class Guest {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
+    private String name;
+    private String surname;
+
 }
