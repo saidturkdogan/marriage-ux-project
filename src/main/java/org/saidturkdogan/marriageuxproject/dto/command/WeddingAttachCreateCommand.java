@@ -1,11 +1,12 @@
 package org.saidturkdogan.marriageuxproject.dto.command;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 public record WeddingAttachCreateCommand(
-        Long weddingId,
-        Long guestId,
-        Long giftId,
+        UUID weddingId,
+        UUID guestId,
+        UUID giftId,
         BigDecimal giftAmount
 ) {
 }
